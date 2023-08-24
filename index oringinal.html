@@ -8,13 +8,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
 body,h1,h5 {font-family: "Raleway", sans-serif}
-body, html {height: 100%; margin: 0;}
+body, html {height: 100%}
 .bgimg {
   background-image: url("images/bg1.jpg");
   min-height: 100%;
   background-position: center;
   background-size: cover;
-  position: relative;
 }
 </style>
 
@@ -25,11 +24,11 @@ body, html {height: 100%; margin: 0;}
 
 <div class="bgimg w3-display-container w3-text-white">
   <div class="w3-display-middle w3-jumbo">
-    <img src="images/wyomingtontext.png" alt="Wyomington Cleaning">
+    <img src="images/wyomingtontext.png"><img/>
   </div>
   <div class="w3-display-topleft w3-container w3-xlarge">
-    <p><button onclick="openModal('menu')" class="w3-button w3-black">Services</button></p>
-    <p><button onclick="openModal('contact')" class="w3-button w3-black">Contact</button></p>
+    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">Services</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">Contact</button></p>
   </div>
   <div class="w3-display-bottomleft w3-container">
     <p class="w3-xlarge">Call for consultation (616)439-4797</p>
@@ -39,11 +38,11 @@ body, html {height: 100%; margin: 0;}
 </div>
 
 <!-- Menu Modal -->
-<!-- Menu Modal -->
 <div id="menu" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom">
-    <span onclick="closeModal('menu')" class="w3-button w3-display-topright w3-large">×</span>
-    <h1>Basic Services</h1>
+    <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Basic Services</h1>
     </div>
     <div class="w3-container">
       <h5></h5>
@@ -103,11 +102,11 @@ body, html {height: 100%; margin: 0;}
 
 
 <!-- Contact Modal -->
-<!-- Contact Modal -->
 <div id="contact" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom">
-    <span onclick="closeModal('contact')" class="w3-button w3-display-topright w3-large">×</span>
-    <h1>Contact</h1>
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Contact</h1>
     </div>
     <div class="w3-container">
       <p>Set up a consultation or make an inquiry:</p>
@@ -126,17 +125,6 @@ body, html {height: 100%; margin: 0;}
 
 </body>
 
-<script>
-function openModal(modalId) {
-  document.getElementById(modalId).style.display = 'block';
-}
-
-function closeModal(modalId) {
-  document.getElementById(modalId).style.display = 'none';
-}
-
-// Your phone number formatting script here
-</script>
 
 <script>
 	var dtt = document.getElementById('dt1')
